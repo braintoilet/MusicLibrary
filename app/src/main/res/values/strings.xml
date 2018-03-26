@@ -1,6 +1,14 @@
 <resources>
-    <string name="app_name">MusicLibrary</string>
+    <string name="app_name">Music Library</string>
     <string name="song_name">Unknown Title</string>
     <string name="artist_name">No Artist</string>
     <string name="album_name">No Album</string>
+
+    <!-- About -->
+    <string name="creator_name">Jerome Alexander Graßnick</string>
+    <string name="creator_email">MailTo: jerome.grassnick@gmail.com</string>
+
+    <!-- Credits -->
+    <string name="credits_song_image1">Images created by Creative Stall</string>
+    <string name="credits_song_image2">from Noun Project</string>
 </resources>

@@ -16,9 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SongsActivity" />
-        <activity android:name=".AlbumsActivity" />
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".SongActivity" />
+        <activity android:name=".AboutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <data android:scheme="mailto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SongInfoActivity"></activity>
     </application>
 
 </manifest>

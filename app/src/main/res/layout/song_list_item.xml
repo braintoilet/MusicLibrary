@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:padding="16dp">
 
     <TextView
@@ -18,24 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="6dp"
-        android:text=" - "
-        android:layout_toRightOf="@+id/song_text"/>
+        android:paddingRight="6dp"
+        android:text=" - " />
 
     <TextView
         android:id="@+id/artist_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/spacer"
-        android:paddingLeft="6dp"
         android:text="DummyArtist"/>
 
-    <TextView
-        android:id="@+id/album_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="3dp"
-        android:paddingLeft="32dp"
-        android:layout_below="@+id/spacer"
-                android:text="DummyAlbum"/>
-
-</RelativeLayout>
+</LinearLayout>

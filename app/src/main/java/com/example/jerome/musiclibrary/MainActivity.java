@@ -18,22 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        songsMenu = (TextView) findViewById(R.id.menu_item_songs);
-        albumsMenu = (TextView) findViewById(R.id.menu_item_albums);
-        aboutMenu = (TextView) findViewById(R.id.menu_item_about);
+        songsMenu = findViewById(R.id.menu_item_songs);
+        aboutMenu = findViewById(R.id.menu_item_about);
 
         songsMenu.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, SongsActivity.class);
-                startActivity(i);
-            }
-        });
-
-        albumsMenu.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, AlbumsActivity.class);
+                Intent i = new Intent(MainActivity.this, SongActivity.class);
                 startActivity(i);
             }
         });

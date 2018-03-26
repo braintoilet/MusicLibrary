@@ -16,7 +16,7 @@ public class Song {
         songImageID = imageID;
     }
 
-    public String getSongNameName(){
+    public String getSongName() {
         return songName;
     }
 
