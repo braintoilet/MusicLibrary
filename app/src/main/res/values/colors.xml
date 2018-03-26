@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#362A7F</color>
+    <color name="colorPrimaryDark">#362A7F</color>
+    <color name="colorAccent">#ADA0FF</color>
+    
+    <color name="musicapp_dark">#362A7F</color>
+    <color name="musicapp_light">#ADA0FF</color>
+    <color name="menu_songs">#5643CC</color>
+    <color name="menu_albums">#6C53FF</color>
+    <color name="menu_about">#57507F</color>
+
 </resources>

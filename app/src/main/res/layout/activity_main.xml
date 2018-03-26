@@ -9,41 +9,73 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
         android:orientation="vertical">
 
+        <!-- song image -->
+        <ImageView
+            android:id="@+id/song_image"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:background="@drawable/image_border"
+            android:padding="12dp"
+            android:src="@drawable/song_image"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"/>
+
+        <!-- song description -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button
-                android:layout_width="150dp"
+            android:paddingBottom="12dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/song_name"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:padding="16dp"
-                android:text="Songs"
-                android:onClick="onClickSongs"/>
+                android:text="@string/song_name"/>
 
-            <Button
-                android:layout_width="150dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="Albums"/>
+                android:text=" - "/>
+
+            <TextView
+                android:id="@+id/artist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/artist_name"/>
         </LinearLayout>
 
+
+        <!-- main menu -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp">
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="About"/>
+            <TextView
+                android:id="@+id/menu_item_songs"
+                style="@style/MenuItemStyle"
+                android:background="@color/menu_songs"
+                android:text="songs" />
+
+            <TextView
+                android:id="@+id/menu_item_albums"
+                style="@style/MenuItemStyle"
+                android:background="@color/menu_albums"
+                android:text="albums" />
+
+            <TextView
+                android:id="@+id/menu_item_about"
+                style="@style/MenuItemStyle"
+                android:background="@color/menu_about"
+                android:text="about" />
+
         </LinearLayout>
 
     </LinearLayout>
