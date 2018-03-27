@@ -1,5 +1,6 @@
 package com.example.jerome.musiclibrary;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
 
-        gridView = findViewById(R.id.list);
+        gridView = findViewById(R.id.grid);
 
         ArrayList<Song> songs = getDummySongs(10);
         SongAdapter listAdapter = new SongAdapter(this, getDummySongs(10));
@@ -32,7 +33,12 @@ public class SongActivity extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Song song = (Song) gridView.getItemAtPosition(position);
-                Toast.makeText(getBaseContext(), song.getSongName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SongActivity.this, SongInfoActivity.class);
+                intent.putExtra("EXTRA_SONG_NAME", song.getSongName());
+                intent.putExtra("EXTRA_ARTIST_NAME", song.getSongArtist());
+                intent.putExtra("EXTRA_ALBUM_NAME", song.getSongAlbum());
+                intent.putExtra("EXTRA_SONG_IMAGE", song.getSongImageID());
+                startActivity(intent);
             }
         });
     }
