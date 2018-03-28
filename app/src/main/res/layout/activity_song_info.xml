@@ -63,5 +63,8 @@
                 android:text="@string/album_name" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/back"
+            style="@style/BackBtnStyle"/>
     </LinearLayout>
 </ScrollView>

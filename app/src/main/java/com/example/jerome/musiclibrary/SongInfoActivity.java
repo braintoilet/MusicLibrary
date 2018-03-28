@@ -3,6 +3,7 @@ package com.example.jerome.musiclibrary;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ public class SongInfoActivity extends AppCompatActivity {
     TextView songNameText;
     TextView songArtistText;
     TextView songAlbumText;
+    TextView backButton;
 
 
     @Override
@@ -34,5 +36,14 @@ public class SongInfoActivity extends AppCompatActivity {
         songArtistText.setText(incoming.getStringExtra("EXTRA_ARTIST_NAME"));
         songAlbumText.setText(incoming.getStringExtra("EXTRA_ALBUM_NAME"));
         songImageView.setImageResource(incoming.getIntExtra("EXTRA_SONG_IMAGE", 0));
+
+        backButton = (TextView)findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SongInfoActivity.this, SongActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
