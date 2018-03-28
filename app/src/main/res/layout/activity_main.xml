@@ -26,13 +26,13 @@
             android:paddingLeft="32dp"
             android:paddingRight="32dp">
 
-            <TextView
+            <Button
                 android:id="@+id/menu_item_songs"
                 style="@style/MenuItemStyle"
                 android:background="@color/menu_songs"
                 android:text="songs" />
 
-            <TextView
+            <Button
                 android:id="@+id/menu_item_about"
                 style="@style/MenuItemStyle"
                 android:background="@color/menu_about"

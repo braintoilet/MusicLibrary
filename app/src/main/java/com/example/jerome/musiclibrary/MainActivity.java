@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView songsMenu;
-    TextView albumsMenu;
-    TextView aboutMenu;
+    Button songsMenu;
+    Button aboutMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

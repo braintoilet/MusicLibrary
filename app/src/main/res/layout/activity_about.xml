@@ -51,6 +51,10 @@
             android:text="@string/credits_song_image2" />
 
 
+        <Button
+            android:id="@+id/back"
+            style="@style/BackBtnStyle"/>
+
     </LinearLayout>
 
 </ScrollView>

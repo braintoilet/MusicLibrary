@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +14,7 @@ public class SongInfoActivity extends AppCompatActivity {
     TextView songNameText;
     TextView songArtistText;
     TextView songAlbumText;
-    TextView backButton;
+    Button backButton;
 
 
     @Override
@@ -37,7 +38,7 @@ public class SongInfoActivity extends AppCompatActivity {
         songAlbumText.setText(incoming.getStringExtra("EXTRA_ALBUM_NAME"));
         songImageView.setImageResource(incoming.getIntExtra("EXTRA_SONG_IMAGE", 0));
 
-        backButton = (TextView)findViewById(R.id.back);
+        backButton = (Button)findViewById(R.id.back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
