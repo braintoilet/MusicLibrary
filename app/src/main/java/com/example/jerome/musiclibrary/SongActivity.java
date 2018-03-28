@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 public class SongActivity extends AppCompatActivity {
 
     GridView gridView;
+    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class SongActivity extends AppCompatActivity {
         setContentView(R.layout.activity_songs);
 
         gridView = findViewById(R.id.grid);
+        backButton = findViewById(R.id.back);
 
         ArrayList<Song> songs = getDummySongs(10);
         SongAdapter listAdapter = new SongAdapter(this, getDummySongs(10));
@@ -38,6 +41,14 @@ public class SongActivity extends AppCompatActivity {
                 intent.putExtra("EXTRA_ARTIST_NAME", song.getSongArtist());
                 intent.putExtra("EXTRA_ALBUM_NAME", song.getSongAlbum());
                 intent.putExtra("EXTRA_SONG_IMAGE", song.getSongImageID());
+                startActivity(intent);
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SongActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

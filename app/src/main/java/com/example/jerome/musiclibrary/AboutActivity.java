@@ -36,11 +36,11 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
-        backButton = (Button)findViewById(R.id.back);
+        backButton = findViewById(R.id.back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SongInfoActivity.this, SongActivity.class);
+                Intent intent = new Intent(AboutActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
