@@ -9,22 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+            android:label="Music Library">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SongActivity" />
-        <activity android:name=".AboutActivity">
+
+        <activity android:name=".SongActivity"
+            android:label="Songs"/>
+
+        <activity android:name=".AboutActivity"
+            android:label="About">
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />
                 <data android:scheme="mailto" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".SongInfoActivity"></activity>
+
+        <activity android:name=".SongInfoActivity"
+            android:label="Song Information"/>
+
     </application>
 
 </manifest>
